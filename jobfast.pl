@@ -1,5 +1,4 @@
 #!/usr/bin/perl
- 
 #
 # JobFast --version 1.0b
 # by: about.me/faissal_elamraoui
