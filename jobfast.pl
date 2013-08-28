@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# JobFast --version 1.0b
+# JobFast --version 1.0.1
 # by: about.me/faissal_elamraoui
 #
 
@@ -15,7 +15,7 @@ use Time::HiRes qw/usleep gettimeofday tv_interval/;
 
 
 
-sub _send_mail {
+sub send_application {
     my $to = shift (@_);
     my $subject = shift (@_);
     my $body = shift (@_);
@@ -126,7 +126,7 @@ sub _send_mail {
     $progress->update($count++);
 }
 
-# Loads Templates
+# Load Templates
 sub _load_tmpl {
     # Template path
     my $path = shift;
@@ -138,8 +138,8 @@ sub _load_tmpl {
     return "@data";
 }
 
-# SEND
-&_send_mail("email@example.com", "Job application",
+# SEND YOUR APPLICATION
+&send_application("email@example.com", "Job application",
             &_load_tmpl('/your/home/Templates/msg.txt'),
             '/your/home/Templates/CV.pdf'
     );
